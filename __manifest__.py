@@ -8,7 +8,7 @@
 'depends': ['base'],
 'data': [
     'security/ir.model.access.csv',
-    'views/traking_view.xml',
+    'views/tracking_view.xml',
 ],
 'icon': ['/ip_visitor_tracking/static/description/icon58.png'],
 'installable': True,

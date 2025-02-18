@@ -1,0 +1,59 @@
+<odoo>
+    <!-- Vista formulario para tracking.info -->
+    <record id="view_tracking_info_form" model="ir.ui.view">
+        <field name="name">tracking.info.form</field>
+        <field name="model">tracking.info</field>
+        <field name="arch" type="xml">
+            <form string="Tracking Information">
+                <sheet>
+                    <group>
+                        <field name="api_key" />
+                    </group>
+                    <!-- Agrupamos el botón en un div para evitar que se monte con otros campos -->
+                    <div class="oe_button_box" name="button_box">
+                        <button name="get_tracking_data" type="object" string="Obtener datos"
+                            class="oe_stat_button" />
+                    </div>
+                    <group>
+                        <field name="ip" />
+                        <field name="pais" />
+                        <field name="ciudad" />
+                        <field name="longitud" />
+                        <field name="latitud" />
+                        <field name="proveedor" />
+                        <field name="organizacion" />
+                        <field name="hora_visita" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <!-- Vista árbol para tracking.info -->
+    <record id="view_tracking_info_tree" model="ir.ui.view">
+        <field name="name">tracking.info.tree</field>
+        <field name="model">tracking.info</field>
+        <field name="arch" type="xml">
+            <tree string="Tracking Information">
+                    <field name="ip" />
+                    <field name="pais" />
+                    <field name="ciudad" />
+                    <field name="longitud" />
+                    <field name="latitud" />
+                    <field name="proveedor" />
+                    <field name="organizacion" />
+                    <field name="hora_visita" />
+            </tree>
+        </field>
+    </record>
+    <!-- Acción ventana para tracking.info -->
+    <record id="action_tracking_info" model="ir.actions.act_window">
+        <field name="name">Tracking Information</field>
+        <field name="res_model">tracking.info</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <!-- Menú raíz para Tracking -->
+    <menuitem id="menu_tracking_root" name="Tracking" sequence="10" />
+    <!-- Menú secundario que referencia a la acción ventana -->
+    <menuitem id="menu_tracking_info" name="Tracking Info" parent="menu_tracking_root"
+        action="action_tracking_info" />
+</odoo>
