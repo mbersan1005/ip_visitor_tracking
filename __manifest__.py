@@ -10,7 +10,7 @@
     'security/ir.model.access.csv',
     'views/tracking_view.xml',
 ],
-'icon': '/ip_visitor_tracking/static/description/icon58.png',
+'icon': '/ip_visitor_tracking/static/description/icono58.png',
 'installable': True,
 'application': True,
 'license': 'LGPL-3',
